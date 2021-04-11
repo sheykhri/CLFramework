@@ -8,7 +8,7 @@ use App\CoderLast\Plugins;
 $bot = new Framework($config['TOKEN']);
 $plugins = new Plugins($config['TOKEN']);
 
-$home = [["Hello word!", "Hello word!"]];
+$home = [["Hello word!", "Hello word!", "Salom"]];
 
 $input = $bot->getInput();
 if(isset($input->message)){
@@ -30,7 +30,6 @@ if($text == "Hello word!"){
     $a = $bot->getMethod();
     $bot->sendMessage($chat_id, print_r($a,true));
 }
-if($text == "Hello word !"){
-    $a = $plugins->getMethod();
-    $bot->sendMessage($chat_id, print_r($a,true));
+if($text == "Salom"){
+    $bot->sendMessage($chat_id, "Alik");
 }
